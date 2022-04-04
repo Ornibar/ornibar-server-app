@@ -12,11 +12,11 @@ Base url '/api/' :
 
 'auth' : 
   - /login (POST)
-      Params : 
+      - Params : 
         - username: String
         - email: Email
   - /register (POST)
-      Params :
+      - Params :
         - firstname: String,
         - lastname: String,
         - username: String
@@ -29,21 +29,21 @@ Base url '/api/' :
 
   - /profile (GET)
   - /update-profile/{user:id} (PUT)
-      Params: 
+      - Params: 
         - username: String
         - email: Email
   - /update-score/{user:id} (PUT)
-      Params: 
+      - Params: 
         - score: Integer
   - /update-profile-image/{user:id} (PUT)
-      Params: 
+      - Params: 
         - file: File
   - /destroy/{user:id} (DELETE)
 
 'question' : 
 
   - /question/questions (POST)
-      Params: 
+      - Params: 
           numberQuestions: Integer
 
 
