@@ -1,12 +1,20 @@
-# Description 
+# Ornibar
+
+## Contexte 
+
+Jeu mobile entres joueurs, sous forme de QCM. Avec des questions imagées et des réponses prêt définies. Démarquez vous en choississant une réponse sortant du lot afin de gagner de points.
+
+## Description 
 
 Ornibar api with Node + Express + Axios
 
-# Methods : 
+## API : 
+
+### Methods : 
 
 GET, POST, PUT, DELETE
 
-# Routes : 
+### Routes :
 
 Base url '/api/' : 
 
@@ -47,7 +55,7 @@ Base url '/api/' :
           numberQuestions: Integer
 
 
-# COMMANDS
+## COMMANDS
 
 
 Install the node modules 
