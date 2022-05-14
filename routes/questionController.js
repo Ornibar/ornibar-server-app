@@ -1,21 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const axios = require('axios');
-
-// const environment = require('../environments/environment');
-
 require('dotenv').config()
 
-// User Prodfile
-router.post("/questions", (req, res) => {
-    //Params
-    const numberQuestions = req.body.numberQuestions.trim();
+// Questions with responses
+router.get("/questions", (req, res) => {
+    // Query
+    const limit = req.query.limit;
 
-    axios.post(process.env.WEB_API_URL+'/question/questions', {numberQuestions: numberQuestions}, {
-        headers: {
-            Authorization: req.headers?.authorization
-        }
-    })
+    axios.get(process.env.WEB_API_URL+'/question/questions', { params: { limit: limit} })
     .then(function (response) {
         // console.log(response.data);
         return res.status(response.status).json(response?.data)
